@@ -1,0 +1,550 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.10.4)  1 NOV 2022 14:57
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**practica3.tex
+(./practica3.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@chapter=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
+)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip49
+\enit@outerparindent=\dimen137
+\enit@toks=\toks15
+\enit@inbox=\box45
+\enit@count@id=\count176
+\enitdp@description=\count177
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+))
+\Gm@cnth=\count178
+\Gm@cntv=\count179
+\c@Gm@tempcnt=\count180
+\Gm@bindingoffset=\dimen138
+\Gm@wd@mp=\dimen139
+\Gm@odd@mp=\dimen140
+\Gm@even@mp=\dimen141
+\Gm@layoutwidth=\dimen142
+\Gm@layoutheight=\dimen143
+\Gm@layouthoffset=\dimen144
+\Gm@layoutvoffset=\dimen145
+\Gm@dimlist=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen146
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen147
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count181
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count182
+\leftroot@=\count183
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count184
+\DOTSCASE@=\count185
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box46
+\strutbox@=\box47
+\big@size=\dimen148
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count186
+\c@MaxMatrixCols=\count187
+\dotsspace@=\muskip16
+\c@parentequation=\count188
+\dspbrk@lvl=\count189
+\tag@help=\toks18
+\row@=\count190
+\column@=\count191
+\maxfields@=\count192
+\andhelp@=\toks19
+\eqnshift@=\dimen149
+\alignsep@=\dimen150
+\tagshift@=\dimen151
+\tagwidth@=\dimen152
+\totwidth@=\dimen153
+\lineht@=\dimen154
+\@envbody=\toks20
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2019/01/04 v1.2 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks22
+\XKV@tempa@toks=\toks23
+)
+\XKV@depth=\count193
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
+
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box48
+)
+\tc@llx=\dimen155
+\tc@lly=\dimen156
+\tc@urx=\dimen157
+\tc@ury=\dimen158
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen159
+\adjbox@Height=\dimen160
+\adjbox@Depth=\dimen161
+\adjbox@Totalheight=\dimen162
+\adjbox@pwidth=\dimen163
+\adjbox@pheight=\dimen164
+\adjbox@pdepth=\dimen165
+\adjbox@ptotalheight=\dimen166
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count194
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box49
+\sift@deathcycles=\count195
+\@vwid@loff=\dimen167
+\@vwid@roff=\dimen168
+))
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2019/10/16 v2.13 Sectioning titles
+\ttl@box=\box50
+\beforetitleunit=\skip53
+\aftertitleunit=\skip54
+\ttl@plus=\dimen169
+\ttl@minus=\dimen170
+\ttl@toksa=\toks24
+\titlewidth=\dimen171
+\titlewidthlast=\dimen172
+\titlewidthfirst=\dimen173
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count196
+\l__pdf_internal_box=\box51
+)
+(./practica3.aux)
+\openout1 = `practica3.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count197
+\scratchdimen=\dimen174
+\scratchbox=\box52
+\nofMPsegments=\count198
+\nofMParguments=\count199
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count266
+\MPscratchDim=\dimen175
+\MPnumerator=\count267
+\makeMPintoPDFobject=\count268
+\everyMPtoPDFconversion=\toks26
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 422.52252pt, 89.62709pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=422.52252pt
+* \textheight=591.5302pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-7.86334pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<images/logo.jpg, id=1, 632.3625pt x 321.2pt>
+File: images/logo.jpg Graphic file (type jpg)
+<use images/logo.jpg>
+Package pdftex.def Info: images/logo.jpg  used on input line 18.
+(pdftex.def)             Requested size: 126.75804pt x 64.38098pt.
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/logo.jpg>]
+(./practica3.toc)
+\tf@toc=\write3
+\openout3 = `practica3.toc'.
+
+ [1
+
+]
+Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--43
+
+ []
+
+<images/enunciado1.png, id=15, 1790.69pt x 1933.2225pt>
+File: images/enunciado1.png Graphic file (type png)
+<use images/enunciado1.png>
+Package pdftex.def Info: images/enunciado1.png  used on input line 44.
+(pdftex.def)             Requested size: 268.5919pt x 289.97087pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 44--48
+[][] 
+ []
+
+[2
+
+ <./images/enunciado1.png>]
+<images/ejercicio1.png, id=23, 746.79pt x 257.96375pt>
+File: images/ejercicio1.png Graphic file (type png)
+<use images/ejercicio1.png>
+Package pdftex.def Info: images/ejercicio1.png  used on input line 54.
+(pdftex.def)             Requested size: 373.39407pt x 128.98155pt.
+<images/ejercicio2.png, id=25, 753.81625pt x 142.5325pt>
+File: images/ejercicio2.png Graphic file (type png)
+<use images/ejercicio2.png>
+Package pdftex.def Info: images/ejercicio2.png  used on input line 60.
+(pdftex.def)             Requested size: 376.90721pt x 71.26607pt.
+ [3 <./images/ejercicio1.png> <./images/ejercicio2.png>]
+<images/ejercicio3.png, id=34, 727.71875pt x 126.4725pt>
+File: images/ejercicio3.png Graphic file (type png)
+<use images/ejercicio3.png>
+Package pdftex.def Info: images/ejercicio3.png  used on input line 91.
+(pdftex.def)             Requested size: 363.85847pt x 63.23608pt.
+ [4 <./images/ejercicio3.png>]
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
+13.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <12> not available
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 113.
+
+Overfull \hbox (8.95494pt too wide) in paragraph at lines 105--116
+\OT1/cmr/m/n/12 Arranca en pc4 un tcp-dump para cap-turar trafico en su in-ter-
+faz eth0, guardando
+ []
+
+
+Overfull \hbox (20.00906pt too wide) in paragraph at lines 105--116
+[]\OT1/cmr/m/n/12 Ejecuta en pc1 un ping a pc4 que en-vie solo 1 pa-quete \OT1/
+cmr/bx/n/12 (ping -c 1 \OML/cmm/b/it/12 <\OT1/cmr/bx/n/12 maquinaDes-
+ []
+
+[5]
+Overfull \hbox (20.00906pt too wide) in paragraph at lines 166--177
+\OT1/cmr/m/n/12 Ejecuta en pc1 un ping a pc2 que en-vie solo 1 pa-quete \OT1/cm
+r/bx/n/12 (ping -c 1 \OML/cmm/b/it/12 <\OT1/cmr/bx/n/12 maquinaDes-
+ []
+
+[6] [7]
+Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--196
+
+ []
+
+<images/enunciado2.png, id=53, 1774.63pt x 1927.2pt>
+File: images/enunciado2.png Graphic file (type png)
+<use images/enunciado2.png>
+Package pdftex.def Info: images/enunciado2.png  used on input line 197.
+(pdftex.def)             Requested size: 266.18301pt x 289.06754pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 197--199
+[][] 
+ []
+
+[8
+
+ <./images/enunciado2.png>]
+Overfull \hbox (44.92262pt too wide) in paragraph at lines 211--212
+[]\OT1/cmr/m/n/12 A~nade ru-tas en las m^^Saquinas ade-cuadas mod-i-f-i-cando s
+u fichero /etc/network/interfaces
+ []
+
+<images/ejercicio4.png, id=60, 637.38126pt x 260.975pt>
+File: images/ejercicio4.png Graphic file (type png)
+<use images/ejercicio4.png>
+Package pdftex.def Info: images/ejercicio4.png  used on input line 213.
+(pdftex.def)             Requested size: 318.68985pt x 130.48718pt.
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 224.
+<images/ejercicio6.png, id=62, 718.685pt x 145.54375pt>
+File: images/ejercicio6.png Graphic file (type png)
+<use images/ejercicio6.png>
+Package pdftex.def Info: images/ejercicio6.png  used on input line 234.
+(pdftex.def)             Requested size: 359.34161pt x 72.77168pt.
+[9 <./images/ejercicio4.png>]
+<images/ejercicio7.png, id=70, 703.62875pt x 161.60374pt>
+File: images/ejercicio7.png Graphic file (type png)
+<use images/ejercicio7.png>
+Package pdftex.def Info: images/ejercicio7.png  used on input line 258.
+(pdftex.def)             Requested size: 351.8135pt x 80.80167pt.
+ [10 <./images/ejercicio6.png> <./images/ejercicio7.png>]
+<images/ejercicio8.png, id=79, 703.62875pt x 181.67876pt>
+File: images/ejercicio8.png Graphic file (type png)
+<use images/ejercicio8.png>
+Package pdftex.def Info: images/ejercicio8.png  used on input line 277.
+(pdftex.def)             Requested size: 351.8135pt x 90.83914pt.
+<images/ejercicio9.png, id=81, 633.36626pt x 88.33pt>
+File: images/ejercicio9.png Graphic file (type png)
+<use images/ejercicio9.png>
+Package pdftex.def Info: images/ejercicio9.png  used on input line 292.
+(pdftex.def)             Requested size: 316.68236pt x 44.16489pt.
+<images/ejercicio10.png, id=83, 635.37375pt x 87.32625pt>
+File: images/ejercicio10.png Graphic file (type png)
+<use images/ejercicio10.png>
+Package pdftex.def Info: images/ejercicio10.png  used on input line 294.
+(pdftex.def)             Requested size: 317.6861pt x 43.66301pt.
+<images/ejercicio11.png, id=85, 632.3625pt x 88.33pt>
+File: images/ejercicio11.png Graphic file (type png)
+<use images/ejercicio11.png>
+Package pdftex.def Info: images/ejercicio11.png  used on input line 308.
+(pdftex.def)             Requested size: 316.18048pt x 44.16489pt.
+<images/ejercicio12.png, id=87, 638.385pt x 91.34125pt>
+File: images/ejercicio12.png Graphic file (type png)
+<use images/ejercicio12.png>
+Package pdftex.def Info: images/ejercicio12.png  used on input line 309.
+(pdftex.def)             Requested size: 319.19171pt x 45.6705pt.
+<images/ejercicio13.png, id=89, 639.38875pt x 105.39375pt>
+File: images/ejercicio13.png Graphic file (type png)
+<use images/ejercicio13.png>
+Package pdftex.def Info: images/ejercicio13.png  used on input line 324.
+(pdftex.def)             Requested size: 319.69359pt x 52.69673pt.
+<images/ejercicio14.png, id=91, 632.3625pt x 108.405pt>
+File: images/ejercicio14.png Graphic file (type png)
+<use images/ejercicio14.png>
+Package pdftex.def Info: images/ejercicio14.png  used on input line 325.
+(pdftex.def)             Requested size: 316.18048pt x 54.20236pt.
+ [11 <./images/ejercicio8.png> <./images/ejercicio9.png> <./images/ejercicio10.
+png> <./images/ejercicio11.png> <./images/ejercicio12.png> <./images/ejercicio1
+3.png>]
+Overfull \hbox (4.6161pt too wide) in paragraph at lines 328--332
+[]\OT1/cmr/m/n/12 Lanza con tcp-dump cap-turas en las sigu-ientes m^^Saquinas, 
+guardando los ficheros
+ []
+
+
+Overfull \hbox (39.17825pt too wide) in paragraph at lines 338--339
+[]\OT1/cmr/m/n/12 Ejecuta en pc1 un ping a pc3 que env^^S^^Pe s^^Solo 2 pa-que-
+tes (ping -c 2 \OML/cmm/m/it/12 <\OT1/cmr/m/n/12 m^^SaquinaDestino\OML/cmm/m/it
+/12 >\OT1/cmr/m/n/12 ). 
+ []
+
+
+Overfull \hbox (47.85683pt too wide) in paragraph at lines 346--359
+[][] 
+ []
+
+
+Overfull \hbox (47.85683pt too wide) in paragraph at lines 362--371
+[][] 
+ []
+
+
+Overfull \hbox (47.85683pt too wide) in paragraph at lines 374--383
+[][] 
+ []
+
+
+Overfull \hbox (47.85683pt too wide) in paragraph at lines 386--399
+[][] 
+ []
+
+[12 <./images/ejercicio14.png>] [13]
+<images/mensajes1.png, id=117, 1335.99126pt x 407.5225pt>
+File: images/mensajes1.png Graphic file (type png)
+<use images/mensajes1.png>
+Package pdftex.def Info: images/mensajes1.png  used on input line 451.
+(pdftex.def)             Requested size: 667.994pt x 203.76074pt.
+<images/mensajes2.png, id=119, 1340.00626pt x 401.5pt>
+File: images/mensajes2.png Graphic file (type png)
+<use images/mensajes2.png>
+Package pdftex.def Info: images/mensajes2.png  used on input line 454.
+(pdftex.def)             Requested size: 670.0015pt x 200.7495pt.
+<images/mensajes3.png, id=121, 1352.05125pt x 405.515pt>
+File: images/mensajes3.png Graphic file (type png)
+<use images/mensajes3.png>
+Package pdftex.def Info: images/mensajes3.png  used on input line 457.
+(pdftex.def)             Requested size: 676.02397pt x 202.75699pt.
+<images/mensajes4.png, id=123, 1345.025pt x 417.56pt>
+File: images/mensajes4.png Graphic file (type png)
+<use images/mensajes4.png>
+Package pdftex.def Info: images/mensajes4.png  used on input line 460.
+(pdftex.def)             Requested size: 672.51085pt x 208.77948pt.
+<images/mensajes5.png, id=125, 1359.0775pt x 408.52625pt>
+File: images/mensajes5.png Graphic file (type png)
+<use images/mensajes5.png>
+Package pdftex.def Info: images/mensajes5.png  used on input line 463.
+(pdftex.def)             Requested size: 679.5371pt x 204.26262pt.
+ [14 <./images/mensajes1.png> <./images/mensajes2.png> <./images/mensajes3.png>
+ <./images/mensajes4.png>]
+<images/mensajes6.png, id=138, 1352.05125pt x 408.52625pt>
+File: images/mensajes6.png Graphic file (type png)
+<use images/mensajes6.png>
+Package pdftex.def Info: images/mensajes6.png  used on input line 466.
+(pdftex.def)             Requested size: 676.02397pt x 204.26262pt.
+ [15 <./images/mensajes5.png> <./images/mensajes6.png>] (./practica3.aux) ) 
+Here is how much of TeX's memory you used:
+ 4589 strings out of 483183
+ 66064 string characters out of 5966292
+ 321571 words of memory out of 5000000
+ 19554 multiletter control sequences out of 15000+600000
+ 539559 words of font info for 48 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 31i,7n,37p,334b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </h
+ome/javier/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmti12.pfb>
+Output written on practica3.pdf (16 pages, 2316859 bytes).
+PDF statistics:
+ 175 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 237 words of extra memory for PDF output out of 10000 (max. 10000000)
+

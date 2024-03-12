@@ -1,0 +1,702 @@
+Fundamentos de Redes de Ordenadores
+Practica 3: Tablas de encaminamiento IP, ARP, ICMP
+
+GSyC - URJC
+Departamento de Teoria de la Senal y Comunicaciones y
+Sistemas Telematicos y Computacion
+Octubre de 2022
+
+Resumen
+En esta practica se aprende a configurar las las tablas de encaminamiento de las maquinas utilizando dos
+metodos distintos: interactivamente mediante el uso del mandato
+
+route
+
+y estaticamente utilizando ficheros de
+
+configuracion.
+IMPORTANTE: En las figuras se muestra un escenario de red en que aparecen direcciones IP con una X entre
+medias (ej.: 200.X.0.40). Cada alumno tendra en su escenario unas IPs con un valor concreto de X.
+
+Introduccion
+Descarga tu escenario introduciendo tu DNI en el enlace:
+
+https://mobiquo.gsyc.urjc.es/practicas/fro/p3.html
+Obtendras un fichero llamado
+
+p3-lab.tgz,
+
+que contiene un escenario de red. Si al pulsar sobre el enlace
+
+aparece una ventana de dialogo, elige "Guardar archivo". Guardalo, por ejemplo, en la carpeta de Descargas.
+Desde el navegador de archivos pulsa con el boton derecho del raton sobre el fichero y selecciona la opcion "Extraer
+aqui". Esta accion creara una carpeta con el nombre
+
+p3-lab,
+
+en la cual estaran los ficheros de configuracion de tu
+
+escenario.
+Entre los ficheros del escenario se incluye el
+
+script reset-lab,
+
+que devuelve el escenario a su estado inicial
+
+cuando se ejecuta. Esto puede resultar util durante la realizacion de la practica. Para ejecutar el
+
+script
+
+hay que
+
+abrir un terminal de la maquina real y estar dentro de la carpeta que contiene el escenario, desde alli escribir:
+
+./reset-lab
+Si se desea simplemente devolver algunas maquinas a su estado inicial, pero no todas, es decir, si por ejemplo
+se desea devolver al estado inicial solo pc1 y r1, se escribira:
+
+./reset-lab pc1 r1
+Tras descomprimir el escenario este se encuentra en su estado inicial, por lo que no es necesario ejecutar
+
+reset-lab
+
+al principio.
+
+NOTA: Para realizar esta practica tendras que consultar la documentacion adicional sobre los comandos para
+modificar la tabla de
+
+routing,
+
+y sobre los comandos
+
+arp, ping
+
+1
+
+y
+
+traceroute.
+
+1. Configuracion de tablas de encaminamiento con route
+-> Open y selecciona la carpeta p3-lab en la que esta el escenario.
+
+Lanza ahora NetGUI. En el menu, elige File
+Veras aparecer la red de la figura 1.
+
+Arranca unicamente las siguientes maquinas:
+
+pc1, pc4, r3
+
+y
+
+pc2.
+
+Este escenario aplica una configuracion asignando direcciones IP a todas las interfaces de las maquinas, excepto
+
+a
+
+pc1.
+
+Esta configuracion inicial esta almacenada en el fichero
+
+/etc/network/interfaces
+
+de cada una de las
+
+maquinas, tal y como se ha visto en la practica anterior.
+
+202.X.0.20
+
+200.X.0.40
+200.X.0.3
+
+202.X.0.3
+
+Figura 1: Solo se arrancan: pc1, pc2, pc4 y r3
+
+Teniendo en cuenta que solo estan estas maquinas arrancadas, responde a las siguientes cuestiones:
+1. Escribe en
+
+pc1
+
+la orden
+
+ping 127.0.0.1.  ¿ Por que se obtiene respuesta pese a no tener configurada pc1 una
+route comprueba el contenido actual de la tabla de encaminamiento (routing ) de
+
+direccion IP? Utilizando
+
+pc1.
+
+2. Modifica el fichero /etc/network/interfaces de pc1
+para que tenga una direccion IP acorde a la de la
+subred a la que esta conectado. (Nota: Deberas consultar previamente la mascara de la subred que tienen
+las otras maquinas conectadas a la misma subred que pc1). Reinicia la red en pc1 para que se aplique la
+configuracion que has escrito en el fichero /etc/network/interfaces. 
+
+
+
+3. Comprueba con route el contenido actual de su table de encaminamiento. Veras como, tras asignar la
+direccion IP a su interfaz de red, se ha anadido automaticamente una entrada en la tabla. Con esta tabla
+actual pc1, ¿a que otras direcciones IP crees que pc1 podra enviar datagramas IP?
+
+4. Dado que el resto de las maquinas encendidas tienen ya configurada una direccion IP, podras suponer facilmente cual es el contenido de su tabla de encaminamiento. Mira la tabla de encaminamiento de pc2 y pc4. ¿A que otras direcciones IP crees que esas maquinas podran enviar datagramas IP?
+5. Intenta deducir cual crees que sera la tabla de encaminamiento de r3,dado que tiene dos interfaces con IP asignada. Compruebalo consultando su tabla. Con esta tabla de encaminamiento,  ¿crees que r3 puede enviar datagramas IP a pc1 y pc4? ¿Y a pc2.
+
+6. Haz ping desde pc1 a pc4 y haz ping desde pc1 a la direccion r3(eth0). Ten en cuenta que no puedes utilizar los nombres
+pc1, pc4, etc. en el ping, sino que debes usar las direcciones IP correspondientes.  ¿Funcionan
+estos ping?  ¿ Que entradas de las tablas de encaminamiento se consultan en cada caso?
+
+7. Haz un ping de pc1 a pc2 y haz un  ping de pc1 a la direccion r3(eth1). ¿Funcionan estos ping? ¿Por que?
+
+8. Añade una ruta con el comando route en pc1 para que los datagramas IP que no sean para su propia subred los envie a traves del router r3.
+
+9. Haz ahora ping desde pc1 a r3(eth1).  ¿Funciona este ping?  ¿Que entradas de las tablas de encaminamiento se consultan?
+10. Haz un ping de pc1 a pc2. ¿Por que crees que no funciona este ping?
+
+11. Añade las rutas necesarias utilizando el comado route para que funcione un ping de pc1 a pc2 y un ping de pc4 a pc2.
+Ten en cuenta que podras utilizar, rutas de maquina, rutas de subred o ruta por defecto.
+
+12.  ¿ Crees que con la configuracion que has realizado funcionara un ping de pc2 pc1 a y un ping pc2 a pc4. Compruebalo.
+13. Antes de continuar espera unos 10 minutos despues de haber ejecutado el ultimo ping del apartado anterior.
+Consulta el estado de las caches de ARP en los pcs y en el router hasta que esten vacias.
+Arranca en pc4 un tcpdump para capturar trafico en su interfaz eth0, guardando la captura en el fichero
+p3-a-01.cap.
+Ejecuta en pc1 un ping a pc4 que envie solo 1 paquete (ping -c 1 <maquinaDestino>).
+Interrumpe la captura en pc4 (Ctrl+C).
+Comprueba el estado de las caches de ARP en pc1, pc4, pc2 y r3 y explica su contenido.
+
+14. Analiza la captura con wireshark. Observa los siguientes campos en los mensajes:
+Mensaje de solicitud de ARP que envia pc1 a pc4.
+? Direccion Ethernet destino
+? Direccion Ethernet origen
+? Tipo en la cabecera Ethernet
+? Contenido del mensaje de solicitud de ARP: localiza el campo que contiene la direccion IP de la
+maquina sobre la que se esta preguntando su direccion Ethernet.
+Mensaje de respuesta de ARP que envia
+
+?
+?
+?
+?
+
+pc4
+
+a
+
+pc1.
+
+Direccion Ethernet destino
+Direccion Ethernet origen
+Tipo en la cabecera Ethernet
+Contenido del mensaje de respuesta de ARP: localiza el campo que contiene la direccion Ethernet
+solicitada.
+
+Datagrama IP que envia
+
+?
+?
+?
+?
+?
+?
+
+a
+
+pc4.
+
+Direccion Ethernet origen
+Tipo en la cabecera Ethernet
+Direccion IP origen
+Direccion IP destino
+Campo TTL
+
+Datagrama IP que envia
+
+?
+?
+?
+?
+?
+?
+
+pc1
+
+Direccion Ethernet destino
+
+pc4
+
+a
+
+pc1.
+
+Direccion Ethernet destino
+Direccion Ethernet origen
+Tipo en la cabecera Ethernet
+Direccion IP origen
+Direccion IP destino
+Campo TTL
+
+NOTA: Si tu captura ha durado mas de 5 segundos, podras ver que, 5 segundos despues de la solictud de
+ARP de pc1 preguntando por pc4, pc4 hace una solicitud de ARP preguntando por pc1, pero esta solicitud de ARP no tiene direccion de destino broadcast, sino la direccion Ethernet de pc1. Esto demuestra que pc4 ya tenia en su cache de ARP la direccion Ethernet de
+pc1 (la aprendio de la solicitud recibida de pc1), y este ARP es simplemente de confirmacion. No todas las implementaciones de TCP/IP realizan esta confirmacion, y en esta asignatura nunca le prestaremos atencion ni preguntaremos sobre ella.
+15. Espera a que la cache de ARP de pc1 este vacia. Ahora vamos a analizar el trafico desde pc1 a pc2. ¿Cuantas capturas de trafico crees que son necesarias para ver todos los paquetes que se generan en el escenario cuando se comunican pc1 y pc2?
+\newline
+Arranca un tcpdump en r3(eth0) guardando la captura en el fichero p3-a-02.cap.
+\newline
+Arranca otro tcpdump en pc2 guardando la captura en el fichero p3-a-03.cap.
+\newline
+Ejecuta en pc1 un ping a pc2 que envie solo 1 paquete (ping -c 1 <maquinaDestino>).
+\newline
+Interrumpe las capturas (Ctrl+C).
+\newline
+Comprueba el estado de las caches de ARP en pc1, pc2, pc4 y r3. Explica su contenido.
+
+
+
+16. Analiza las capturas realizadas con wireshark. Observa en los mensajes los mismo campos que analizaste el apartado anterior. Presta especial atencion a los datagramas IP. Identifica los mensajes en las dos capturas
+que contienen el mismo datagrama IP.  ¿Que direcciones Ethernet tiene la trama que contiene esos datagramas
+en cada captura?  ¿Que valor tiene el campo TTL de la cabecera IP en cada uno?
+
+3
+
+2. Configuracion de tablas de encaminamiento mediante ficheros
+de configuracion
+Arranca el resto de las maquinas y routers de la figura y obtendras un diagrama similar a la figura 2. Ten en
+cuenta que en
+
+pc1
+
+ya tendras configurada una direccion IP, manten esta configuracion.
+
+202.X.0.20
+
+200.X.0.40
+200.X.0.3
+
+202.X.0.3
+
+202.X.0.2
+
+200.X.0.1
+201.X.0.1
+
+201.X.0.2
+203.X.0.2
+
+203.X.0.30
+
+Figura 2: Todas las maquinas arrancadas
+
+1.  ¿ Cuantas subredes observas en la figura? Escribe la direccion de cada una de estas subredes junto con su
+mascara.
+2. Reinicia las maquinas
+
+pc1, pc2
+
+y
+
+pc4.
+routers, comprobaras
+routers solo tienen ruta
+
+Consulta las tablas de encaminamiento en todas las maquinas y
+
+que las rutas que
+
+configuraste en el apartado anterior han desaparecido. Los pcs y
+
+hacia las subredes
+
+a las que estan directamente conectados. Por tanto solo podran enviar paquetes a sus maquinas vecinas.
+3. Anade rutas en las maquinas adecuadas modificando su fichero
+
+/etc/network/interfaces
+
+de forma que
+
+funcionen las siguientes rutas:
+
+a)
+
+Conectividad entre
+
+pc1
+
+y
+
+pc2
+
+en los dos sentidos, a traves de las siguientes rutas:
+
+pc1=>r3=>pc2
+pc2=>r3=>pc1
+NOTA: Puedes emplear rutas de maquina, rutas de red o rutas por defecto.
+
+pc1 la orden ping -c 3 <dirIPpc2> para comprobar si hay conectividad entre las maquinas.
+route en pc1 y observar que
+entrada de la tabla de encaminamiento se utiliza cuando se desea alcanzar pc2. Esta entrada deberia
+indicar que el siguiente salto es r3. A continuacion en r3 deberas ejecutar route y observar que entrada
+de la tabla de encaminamiento se utiliza cuando se desea alcanzar pc2. Esta entrada deberia indicar que
+r3 no necesita ningun router adicional para alcanzar pc2.
+Ejecuta en
+
+Para verificar que el camino es el descrito previamente, deberas ejecutar
+
+De forma analoga deberas consultar las tablas de encaminamiento en el sentido pc2=>r3=>pc1.
+
+b)
+
+Conectividad entre
+
+pc2
+
+y
+
+pc3
+
+en los dos sentidos, a traves de la siguientes rutas:
+
+pc2=>r2=>pc3
+pc3=>r2=>pc2
+
+pc2 la orden ping -c 3 <dirIPpc3> para comprobar si hay conectividad entre las maquinas.
+route en pc2 y observar que
+de la tabla de encaminamiento se utiliza cuando se desea alcanzar pc3. Esta entrada deberia
+
+Ejecuta en
+
+Para verificar que el camino es el descrito previamente, deberas ejecutar
+entrada
+
+4
+
+indicar que el siguiente salto es
+
+r2.
+
+A continuacion en
+
+r2
+
+r2
+
+no necesita ningun router adicional para alcanzar
+
+route y observar que entrada
+pc3. Esta entrada deberia indicar que
+
+deberas ejecutar
+
+de la tabla de encaminamiento se utiliza cuando se desea alcanzar
+
+pc3.
+
+De forma analoga deberas consultar las tablas de encaminamiento en el sentido pc3=>r2=>pc2.
+
+c)
+
+Conectividad entre
+
+pc1
+
+y
+
+pc3
+
+en los dos sentidos, a traves de las siguientes rutas:
+
+pc1=>r1=>r2=>pc3
+pc3=>r2=>r3=>pc1
+
+pc1 la orden ping -c 3 <dirIPpc3> para comprobar si hay conectividad entre las maquinas.
+route en pc1 y observar que
+entrada de la tabla de encaminamiento se utiliza cuando se desea alcanzar pc3. Esta entrada deberia
+indicar que el siguiente salto es r1. Despues, deberas ejecutar route en r1 y observar que entrada de la
+tabla de encaminamiento se utiliza cuando se desea alcanzar pc3. Esta entrada deberia indicar que el
+siguiente salto es r2. A continuacion en r2 deberas ejecutar route y observar que entrada de la tabla de
+encaminamiento se utiliza cuando se desea alcanzar pc3. Esta entrada deberia indicar que r2 no necesita
+ningun router adicional para alcanzar pc3.
+Ejecuta en
+
+Para verificar que el camino es el descrito previamente, deberas ejecutar
+
+De forma analoga deberas consultar las tablas de encaminamiento en el sentido pc3=>r2=>r3=>pc1.
+
+pc1
+
+4. Ejecuta en
+
+un
+
+traceroute
+
+hacia
+
+pc2
+
+y en
+
+pc2
+
+uno hacia
+
+pc1
+
+para comprobar que las rutas son las
+
+un
+
+traceroute
+
+hacia
+
+pc3
+
+y en
+
+pc3
+
+uno hacia
+
+pc2
+
+para comprobar que las rutas son las
+
+pc1
+
+para comprobar que las rutas son las
+
+especificadas.
+
+pc2
+
+5. Ejecuta en
+
+especificadas.
+
+pc1
+
+6. Ejecuta en
+
+un
+
+traceroute hacia pc3 y en pc3 uno
+traceroute observaras que
+
+especificadas. En este ultimo
+
+hacia
+
+aparecen unos
+
+*,
+
+en el final del tema 4 de teoria
+
+veremos a que se deben. En la siguiente practica se estudiaran mas en detalle estas situaciones.
+7. Antes de continuar asegurate de que las rutas entre las maquinas son las especificadas en el apartado anterior.
+
+tcpdump
+
+Lanza con
+
+captura en
+captura en
+captura en
+captura en
+Ejecuta en
+
+pc1
+
+capturas en las siguientes maquinas, guardando los ficheros con el nombre que se indica:
+
+r1(eth0) con nombre de fichero p3-b-01.cap
+r2(eth0) con nombre de fichero p3-b-02.cap
+r3(eth1) con nombre de fichero p3-b-03.cap
+pc3(eth0) con nombre de fichero p3-b-04.cap
+un
+
+ping
+
+a
+
+pc3
+
+que envie solo 2 paquetes (ping
+
+-c 2 <maquinaDestino>).
+
+Interrumpe las 4 capturas (Ctrl+C).
+
+wireshark las 4 capturas. Observa en ellas como los datagramas IP que
+ping contienen un mensaje de ICMP. Comprueba en estos datagramas:
+
+Analiza con
+la orden
+
+se envian y reciben con
+
+Direccion IP origen
+Direccion IP destino
+TTL en la cabecera IP
+Campo Protocolo (tipo de protocolo) en la cabecera IP
+Campos Tipo y Codigo en la cabecera ICMP.
+Consultando las capturas, responde a las siguientes cuestiones:
+
+a)
+b)
+c)
+
+ ¿ En que se distinguen los mensajes "de ida" del
+
+ping
+
+de los mensajes "de vuelta"?
+
+ ¿ En que capturas se pueden ver los mensajes "de ida" del
+
+ping?
+
+ ¿ Y los mensajes de vuelta?  ¿ Por que?
+
+Comprueba los valores del campo TTL de la cabecera IP de todos los datagramas de todas las capturas
+y explica dichos valores.
+
+8. Arranca de nuevo
+
+tcpdump en las mismas maquinas e interfaces que lo has hecho anteriormente pero guardando
+
+las capturas en otros ficheros diferentes:
+captura en
+captura en
+captura en
+captura en
+Ejecuta en
+
+pc1
+
+r1(eth0) con nombre de fichero p3-b-05.cap
+r2(eth0) con nombre de fichero p3-b-06.cap
+r3(eth1) con nombre de fichero p3-b-07.cap
+pc3(eth0) con nombre de fichero p3-b-08.cap
+la orden
+
+traceroute
+
+a
+
+pc3.
+
+Cuando la orden anterior haya terminado completament, interrumpe las capturas (Ctrl+C).
+A la vista del resultado que se muesta en
+de
+
+pc1
+
+a
+
+pc3?
+
+9. Abre con
+
+wireshark
+
+pc1:  ¿ por que router
+
+intermedios ha pasado un paquete para llegar
+
+los ficheros de captura que has obtenido. Identifica en los ficheros de capturas los
+
+siguientes paquetes:
+
+5
+
+Los 3 mensajes enviados por
+
+pc1
+
+con TTL=1
+
+Los 3 ICMP de TTL excedido enviados por
+Los 3 mensajes enviados por
+
+pc1
+
+Los 3 ICMP de TTL excedido enviados por
+Los 3 mensajes enviados por
+
+pc1
+
+r1
+
+con TTL=2
+
+r2
+
+con TTL=3
+
+Los 3 ICMP de puerto inalcanzable enviados por
+
+pc3
+
+10. Consultando las capturas, responde a las siguientes cuestiones:
+
+a)
+b)
+
+ ¿ Por que ruta van viajando los mensajes enviados por
+ ¿ Por que ruta viajan los ICMP enviados por
+
+pc1
+
+con TTL creciente?
+
+r1?
+
+ ¿ Que direccion IP usa
+
+r1
+
+como IP de origen el enviar
+
+r2?
+
+ ¿ Que direccion IP usa
+
+r2
+
+como IP de origen el enviar
+
+esos ICMP?
+
+c)
+
+ ¿ Por que ruta viajan los ICMP enviados por
+esos ICMP?
+
+d)
+
+ ¿ Por que ruta viajan los ICMP enviados por
+
+pc3?
+
+3. Entrega de la practica
+Sube al enlace que encontraras en Aula Virtual, y antes de que termine el plazo de entrega, los siguientes
+ficheros
+Memoria
+Un unico fichero
+
+p3.zip
+
+que contenga una carpeta
+
+p3
+
+con los ficheros de captura:
+
+? p3-a-01.cap, p3-a-02.cap, p3-a-03.cap
+? p3-b-01.cap, p3-b-02.cap, p3-b-03.cap, p3-b-04.cap, p3-b-05.cap, p3-b-06.cap, p3-b-07.cap, p3-b-08.cap
+
+6
+
